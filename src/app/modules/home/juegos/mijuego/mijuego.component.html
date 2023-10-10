@@ -1,0 +1,15 @@
+<div class="bg-amarillo">
+    <input type="button" value="Volver" class="btn m-3 p-2 volver" routerLink="/home">
+    <div class="container d-flex align-items-center justify-content-center flex-column" style="width: 100vw; height: 82vh;">
+        <h2>Breakout</h2>
+        <div class="juego">
+            <canvas id="canvas" width="1000" height="600" class="canv"></canvas>
+            <img src="../../../../../assets/mi_juego/background.png" alt="">
+            <div id="opciones" class="container d-flex align-items-center justify-content-center flex-row">
+                <div *ngIf="corriendo" id="puntaje" class="m-2 p-2">Puntos: {{puntaje}}</div>
+                <input type="button" value="{{btnJugar}}" (click)="jugar()" class="m-2 p-2 volver" id="jugar">
+                <div id="info" class="m-2 p-2">{{info}}</div>
+            </div>
+        </div>
+    </div>
+</div>

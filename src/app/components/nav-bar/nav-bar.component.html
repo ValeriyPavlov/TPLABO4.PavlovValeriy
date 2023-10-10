@@ -1,0 +1,8 @@
+<nav class="navbar navbar-dark bg-dark bg-gradient" style="width: 100vw; height: 10vh;">
+    <div class="mx-4">
+        <img src="../../../assets/img/joystick.png" alt="joystick" style="width:75px; height: 75px;">
+    </div>
+    <input *ngIf="activeUser" type="button" value="Salir" (click)="logOut()" style="position: absolute; left: 120px" class="boton">
+    <h2 class="font-weight-bold text-white title">Bienvenido a la Sala de Juegos {{activeUser}}!</h2>
+    <input type="button" class="boton" value="{{btnLabel}}" (click)="btnClick()" style="position: absolute; right: 20px;">
+</nav>

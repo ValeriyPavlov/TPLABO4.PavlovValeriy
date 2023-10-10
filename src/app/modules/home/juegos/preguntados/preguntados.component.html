@@ -1,0 +1,19 @@
+<div class="bg-verde">
+    <input type="button" value="Volver" class="btn btn-warning m-3 p-2 volver" routerLink="/home">
+    <div class="container d-flex align-items-center justify-content-center flex-column" style="width: 100vw; height: 82vh;">
+        <h1>PREGUNTADOS</h1>
+        <img src="{{bandera}}" alt="">
+        <div *ngIf="banderaJugar">
+            <h1 class="m-2 p-2">{{pregunta}}</h1>
+            <div class="d-flex flex-row align-items-between justify-content-center m-1 p-1">
+                <input *ngIf="mostrarA" type="button" value="{{respuestaA}}" class="botonABC" (click)="chequearRespuesta('a')" >
+                <input *ngIf="mostrarB" type="button" value="{{respuestaB}}" class="botonABC" (click)="chequearRespuesta('b')" >
+                <input *ngIf="mostrarC" type="button" value="{{respuestaC}}" class="botonABC" (click)="chequearRespuesta('c')" >
+            </div>
+            <div class="d-flex align-items-center justify-content-center m-1 p-1" *ngIf="banderaPuntaje">
+                <h3>Puntaje: {{puntaje}}</h3>
+            </div>
+        </div>
+        <input type="button" value="{{btnLabel}}" [ngClass]="{'jugar': claseBoton, 'reiniciar': !claseBoton}" style="height: 50px; width: 200px;" (click)="jugar()">
+    </div>
+</div>

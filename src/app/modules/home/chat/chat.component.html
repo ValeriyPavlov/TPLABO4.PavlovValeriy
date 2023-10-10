@@ -1,0 +1,12 @@
+<div class="container d-flex align-items-start justify-content-center bg-dark flex-column" style="height: 75vh; width: 400px; border: solid 2px yellow;">
+    <h2 class="text-white m-2">CHAT</h2>
+    <div id="mensajes-container" class="card-body h-100 mensajes bg-dark w-100 chat-container" #chatContainer>
+        <p *ngFor="let mensaje of mensajes" class="text-white">
+            {{mensaje}}
+        </p>
+    </div>
+    <div class="d-flex flex-row m-2 p-1">
+        <input type="text" class="form-control m-3" style="height: 50px;" placeholder="Escribe un mensaje..." [(ngModel)]="nuevoMensaje">
+        <button type="button" (click)="EnviarMensaje()" class="p-2 boton-enviar">Enviar <img src="../../../../assets/img/Send.png" alt=""></button>
+    </div>
+</div>

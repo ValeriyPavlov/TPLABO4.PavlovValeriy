@@ -1,0 +1,26 @@
+
+<div class="bg-image" style="background-image: url('../../../assets/img/Gaming-bg.jpg'); width:100vw; height: 90vh;">
+    <div class="d-flex align-items-center justify-content-center p-5">
+      <div class="card text-center align-self-center" style="width: 400px; height: 550px;">
+        <div class="card-header">
+          <h1>{{login}}</h1>
+        </div>
+        <div class="card-body p-5">
+          <h3>Usuario:</h3>
+          <input type="text" placeholder="Usuario" class="form-control" [(ngModel)]="user"/>
+          <br>
+          <h3>Contraseña:</h3>
+          <input type="password" placeholder="Contraseña" class="form-control"[(ngModel)]="password"/>
+          <br>
+          <input type="button" value={{btnLabel}} class="btn btn-primary btn-block m-3" (click)="login_reg()"/>
+          <br>
+          <label>{{logLabel}}</label>
+          <input type="button" value={{btnLabel2}} class="btn btn-secondary m-1" (click)="login_register()"/>
+          <br>
+          <br>
+          <input type="button" value="Auto Login" class="btn btn-info m-2" (click)="autoLog()"/>
+        </div>
+      </div>
+    </div>
+      <lib-toastify-toast-container position="bottom-right" transition="flip" [newestOnTop]="true"></lib-toastify-toast-container>
+  </div>
