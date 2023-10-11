@@ -5,19 +5,19 @@
     <div class="d-flex flex-row align-items-center justify-content-center">
         <div class="container d-flex align-items-center justify-content-center p-2">
             <div>
-                <input type="button" value="Ahorcado" (click)="jugar('home/ahorcado')" class=" btn btn-warning tam btn-lg m-5">
+                <button (click)="jugar('home/ahorcado')" class=" btn btn-warning tam btn-lg m-5"><img src="../../../assets/img/ahorcado.png" alt="" style="height: 150px; width: 150px;">Ahorcado</button>
             </div>
 
             <div>
-                <input type="button" value="Mayor o Menor" (click)="jugar('home/mayoromenor')" class=" btn btn-warning tam btn-lg m-5">
+                <button (click)="jugar('home/mayoromenor')" class=" btn btn-warning tam btn-lg m-5"><img src="../../../assets/img/mayoromenor.png" alt="" style="height: 150px; width: 150px;"> Mayor o Menor</button>
             </div>
 
             <div>
-                <input type="button" value="Preguntados" (click)="jugar('home/preguntados')" class=" btn btn-warning tam btn-lg m-5">
+                <button (click)="jugar('home/preguntados')" class=" btn btn-warning tam btn-lg m-5"><img src="../../../assets/img/preguntados.png" alt="" style="height: 150px; width: 150px;"> Preguntados</button>
             </div>
 
             <div>
-                <input type="button" value="Mi Juego" (click)="jugar('home/mijuego')" class="btn btn-warning tam btn-lg m-5">
+                <button (click)="jugar('home/mijuego')" class=" btn btn-warning tam btn-lg m-5"><img src="../../../assets/img/breakout.png" alt="" style="height: 150px; width: 150px;">Breakout</button>
             </div>
         </div>
         <div [hidden]="mostrarChat"><app-chat></app-chat></div>
