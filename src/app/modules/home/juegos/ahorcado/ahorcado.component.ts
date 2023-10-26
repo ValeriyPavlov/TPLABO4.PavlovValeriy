@@ -15,7 +15,7 @@ export class AhorcadoComponent {
   public equivocaciones = 0;
   public gano: boolean = false;
   
-
+  public teclas = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
   public preguntas = ["¿Que animal domestico es conocido por cazar ratones?", "¿Que formacion geografica es alta y generalmente cubierta de nieve?", "¿Que dispositivo usamos para hacer llamas y enviar mensajes?", "¿Que postre suele ser frio y viene en una variedad de sabores?", "¿Que estacion del año sigue al verano?", "¿Que objeto se utiliza para leer historias e informacion impresa?", "¿Que vehiculo se utiliza para transportar mercancias en grandes cantidades?", "¿Que dispositivo electronico se utiliza para navegar por internet y hacer tareas digitales?", "¿Que vehiculo tiene dos ruedas y se impulsa pedaleando?", "¿Que comida italiana es redonda, tiene masa, salsa y diferentes ingredientes?"];
   public respuestas = ["GATO", "MONTAÑA", "CELULAR", "HELADO", "OTOÑO", "LIBRO", "CAMION", "COMPUTADORA", "BICICLETA", "PIZZA"];
 
@@ -34,6 +34,7 @@ export class AhorcadoComponent {
       this.equivocaciones = 0;
       this.gano = false;
       this.img = `../../assets/ahorcado/${this.equivocaciones}.jpg`;
+      this.teclas = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
       this.GenerarPalabra();
     }
   }
@@ -50,13 +51,16 @@ export class AhorcadoComponent {
     }while (tamanio > 0)
   }
 
-  public AgregarLetra(letra: string)
+  public AgregarLetra(letra: string, dis: number)
   {
     if(this.btnLabel == "Reiniciar")
     {
+      this.teclas[dis] = true;
       if(this.palabra.indexOf(letra) != -1)
       {
         var currentIndex = 0;
+        this.teclas[dis] = true;
+        console.log(this.teclas[dis]);
         do
         {
           currentIndex = this.palabra.indexOf(letra, currentIndex);
